@@ -1,0 +1,572 @@
+:root {
+  --color1:#fff;
+	--color2:#242424;
+  --color3:#f1f1f1;
+	--color4:#f9f9f9;
+	--color5:#c0e9ed;
+	--color6:#c0c1ed;
+	--color7:#edc0e3;
+	--color8:#c0edcc;
+	--color9:#d1d1d1;
+	--color10:#e2edc0;
+	--color11:#5a5a5a;
+	--color12:#f5f5f5;
+	--color13:#d3d3d3;
+	--color14:#196c6c;
+	--color15:#e9f5f5;
+	--color16:rgba(82, 82, 82, 0.38);
+	--color17:#a5a5a5;
+}
+
+[data-theme="dark"] {
+  --color1:#282e33;
+	--color2:#dbdbdb;
+	--color3:#343a3e;
+	--color4:#2d3338;
+	--color5:#536768;
+	--color6:#5f5f76;
+	--color7:#83697d;
+	--color8:#5e7665;
+	--color9:#5e5e5e;
+	--color10:#6f745d;
+	--color11:#9f9f9f;
+	--color12:#363636;
+	--color13:#424242;
+	--color14:#3ab1b1;
+	--color15:#2c3636;
+	--color16:rgba(22, 22, 22, 0.38);
+	--color17:#787878;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+@font-face {
+	font-family: Tahoma;
+		src: url(/fonts/Tahoma.ttf) format('truetype'),
+		url(/fonts/Tahoma.ttf) format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+html{	
+	background-color:#fff;
+}
+
+body{
+	font-size:0.85rem; /* 0.6rem */
+	background-color:var(--color1);
+}
+
+.layout-cell {
+	overscroll-behavior: auto;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	scrollbar-width: thin;
+}
+
+.layout-scrollbar {
+	scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.layout-scrollbar::-webkit-scrollbar {
+	height: 0.375em;
+	width: 0.375em;
+}
+
+.layout-scrollbar::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+.layout-scrollbar::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 0.2em;
+}
+
+.layout-scrollbar::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.layout-scrollbar::-webkit-scrollbar-thumb:active {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.layout-scrollbar::-webkit-scrollbar-thumb:vertical {
+	min-height: 1em;
+}
+
+.layout-scrollbar::-webkit-scrollbar-thumb:horizontal {
+	min-width: 1em;
+}
+
+.layout-scrollbar::-moz-scrollbar {
+	height: 0.375em;
+	width: 0.375em;
+}
+
+.layout-scrollbar::-moz-scrollbar-track {
+	background-color: transparent;
+}
+
+.layout-scrollbar::-moz-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 0.2em;
+}
+
+.layout-scrollbar::-moz-scrollbar-thumb:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.layout-scrollbar::-moz-scrollbar-thumb:active {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.layout-scrollbar::-moz-scrollbar-thumb:vertical {
+	min-height: 1em;
+}
+
+.layout-scrollbar::-moz-scrollbar-thumb:horizontal {
+	min-width: 1em;
+}
+
+textarea {
+	resize: none;
+}
+
+button, input, textarea {
+	outline: 0 !important;
+	-moz-appearance: none;
+	font-family: Tahoma;
+}
+
+button {
+	cursor: pointer;
+}
+
+input.input{
+	border:0;
+	background-color:transparent;
+	outline: 0 !important;
+	-moz-appearance: none;
+	font-family: Tahoma;
+	color:var(--color11);
+	letter-spacing: 0.1em;
+	height:2.5em;
+}
+
+div.dark_background{
+	top: 0;
+	background-color:rgba(0,0,0,0.4);
+}
+
+div.error_window, div.type_remind_window, div.day_remind_window, div.month_remind_window, div.minute_remind_window, div.number_remind_window, div.confirm_delete_remind_window, div.hour_and_minute_remind_window, div.interval_remind_window, div.add_or_edit_remind_window{
+	background-color:var(--color1);
+	border-radius:0.5em;
+	box-shadow: 0 0 1.5em 0 var(--color16);
+	max-width: 25em;
+	min-width: 15em;
+	height: fit-content;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+div.header_error_window, div.header_type_remind_window, div.header_day_remind_window, div.header_month_remind_window, div.header_minute_remind_window, div.header_number_remind_window, div.header_confirm_delete_remind_window, div.header_hour_and_minute_remind_window, div.header_interval_remind_window, div.header_add_or_edit_remind_window{
+	height:3em;
+	margin: 0.8em 0.8em 0em 1.5em;
+}
+
+div.header_error_window > span, div.header_type_remind_window > span, div.header_day_remind_window > span, div.header_month_remind_window > span, div.header_minute_remind_window > span, div.header_number_remind_window > span, div.header_confirm_delete_remind_window > span, div.header_hour_and_minute_remind_window > span, div.header_interval_remind_window > span, div.header_add_or_edit_remind_window > span{
+	color:var(--color2);
+	font-family: Tahoma;
+	font-weight:bold;
+	letter-spacing: 0.1em;
+}
+
+i.icon_close_window{
+	display:block;
+	width:2.5em;
+	height:2.5em;
+	background-size: 40% 40%;
+	background-position: 50% 50%;
+	background-repeat:no-repeat;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGc+PHBhdGggZmlsbD0iIzhiOGI4YiIgZD0iTTQsMjlhMSwxLDAsMCwxLS43MS0uMjksMSwxLDAsMCwxLDAtMS40MmwyNC0yNGExLDEsMCwxLDEsMS40MiwxLjQybC0yNCwyNEExLDEsMCwwLDEsNCwyOVoiLz48cGF0aCBmaWxsPSIjOGI4YjhiIiBkPSJNMjgsMjlhMSwxLDAsMCwxLS43MS0uMjlsLTI0LTI0QTEsMSwwLDAsMSw0LjcxLDMuMjlsMjQsMjRhMSwxLDAsMCwxLDAsMS40MkExLDEsMCwwLDEsMjgsMjlaIi8+PC9nPjxnPjxyZWN0IGZpbGw9Im5vbmUiIGhlaWdodD0iMzIiIHdpZHRoPSIzMiIvPjwvZz48L3N2Zz4);
+}
+
+div.content_error_window, div.content_type_remind_window, div.content_day_remind_window, div.content_month_remind_window, div.content_minute_remind_window, div.content_number_remind_window, div.content_confirm_delete_remind_window, div.content_hour_and_minute_remind_window, div.content_interval_remind_window{
+	height: 9em;
+	margin: 0em 1.5em 1.5em 1.5em;
+	color:var(--color2);
+	font-family: Tahoma;
+	letter-spacing: 0.1em;
+}
+
+div.content_type_remind_window, div.content_day_remind_window, div.content_month_remind_window{
+	height: 11em;
+}
+
+div.content_minute_remind_window, div.content_number_remind_window, div.content_confirm_delete_remind_window, div.content_hour_and_minute_remind_window{
+	height: 10em;
+}
+
+div.content_confirm_delete_remind_window{
+	height: 6.5em;
+}
+
+div.content_interval_remind_window{
+	height: 11.5em;
+}
+
+div.all_reminders_block{
+	padding:0 1em 1em 1em;
+	height: calc(100vh - 3.5em);
+}
+
+div.item_reminder{
+	border:0.1em solid var(--color3);
+	background-color:var(--color4);
+	max-width: 25em;
+	min-width: 15em;
+	padding:1em;
+	margin-bottom: 1em;
+}
+
+div.header_item_reminder{
+	height:2.5em;
+	padding-bottom:1em;
+}
+
+div.header_item_reminder > span, div.text_item_reminder > span{
+	color:var(--color2);
+	font-family: Tahoma;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+
+div.text_item_reminder > span{
+	font-weight: normal;
+}
+
+div.text_item_reminder{
+	padding-bottom:1em;
+	height: 5em;
+}
+
+i.icon_edit_item_reminder{
+	display:block;
+	width:1.5em;
+	height:1.5em;
+	background-size: 70% 70%;
+	background-position: 50% 50%;
+	background-repeat:no-repeat;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iIzhiOGI4YiI+PHBhdGggZD0iTTMuMDU1LDI3LjYyM2MtMC4xNTEsMC4zNzMgLTAuMDY1LDAuOCAwLjIxOSwxLjA4NGMwLjI4NSwwLjI4NSAwLjcxMiwwLjM3MSAxLjA4NCwwLjIxOWw3LjE1NCwtMi45MTFjMC4zMSwtMC4xMjYgMC41MzcsLTAuMzk5IDAuNjAzLC0wLjcyOGMwLjA2NywtMC4zMjggLTAuMDM2LC0wLjY2OCAtMC4yNzMsLTAuOTA1bC00LjI0MiwtNC4yNDNjLTAuMjM3LC0wLjIzNyAtMC41NzcsLTAuMzM5IC0wLjkwNiwtMC4yNzNjLTAuMzI4LDAuMDY3IC0wLjYwMSwwLjI5MyAtMC43MjgsMC42MDNsLTIuOTExLDcuMTU0WiIvPjxwYXRoIGQ9Ik0yMC4yNTQsNi4xMDdsLTEyLjA2MywxMi4wMzVjMC4zMDEsMC4xNDQgMC41OCwwLjM0IDAuODIzLDAuNTgzYy0wLDAgNC4yNDMsNC4yNDMgNC4yNDMsNC4yNDNjMC4yNDUsMC4yNDUgMC40NDMsMC41MjggMC41ODgsMC44MzRsMTIuMDY2LC0xMi4wMzhsLTUuNjU3LC01LjY1N1ptMS40MTYsLTEuNDEzbDUuNjU3LDUuNjU3bDAuNzQyLC0wLjczOWMwLjU2MywtMC41NjMgMC44OCwtMS4zMjYgMC44ODEsLTIuMTIzYzAsLTAuNzk2IC0wLjMxNiwtMS41NiAtMC44NzksLTIuMTIzYy0wLjQ1NSwtMC40NTUgLTAuOTU5LC0wLjk1OSAtMS40MTQsLTEuNDE0Yy0xLjE3MSwtMS4xNyAtMy4wNjgsLTEuMTcyIC00LjI0LC0wLjAwMmwtMC43NDcsMC43NDRaIi8+PC9zdmc+);
+}
+
+i.icon_delete_item_reminder{
+	display:block;
+	width:1.5em;
+	height:1.5em;
+	background-size: 80% 80%;
+	background-position: 50% 50%;
+	background-repeat:no-repeat;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0iIzhiOGI4YiI+PHBhdGggZD0iTTIzLjc5MyA2LjQzOWgtNC40MjVsLTEuMTA2LTEuMTA2aC00LjQyNWwtMS4xMDYgMS4xMDZoLTQuNDI1Yy0wLjY2NCAwLTEuMTA2IDAuNDQyLTEuMTA2IDEuMTA2czAuNDQyIDEuMTA2IDEuMTA2IDEuMTA2aDE1LjQ4NmMwLjY2NCAwIDEuMTA2LTAuNDQyIDEuMTA2LTEuMTA2cy0wLjQ0Mi0xLjEwNi0xLjEwNi0xLjEwNnpNOC4zMDYgMjQuNjEyYzAgMS4xMyAwLjk5NiAyLjA1NCAyLjIxMiAyLjA1NGgxMS4wNjJjMS4yMTcgMCAyLjIxMi0wLjkyNCAyLjIxMi0yLjA1NHYtMTMuMzUzaC0xNS40ODZ2MTMuMzUzek0xOC41NzggMTMuNjNoMS42NTl2MTAuNjY3aC0xLjY1OXYtMTAuNjY3ek0xMS45NTcgMTMuNjNoMS42NTl2MTAuNjY3aC0xLjY1OXYtMTAuNjY3eiI+PC9wYXRoPjwvc3ZnPg);
+}
+
+div.type_item_reminder, div.month_item_reminder, div.number_item_reminder, div.time_item_reminder, div.interval_item_reminder, div.day_item_reminder {
+	height:1.5em;
+	background-color:var(--color5);
+	padding: 0 0.7em;
+	border-radius:2em;
+	margin: 0.2em;
+}
+
+div.type_item_reminder > span, div.month_item_reminder > span, div.number_item_reminder > span, div.time_item_reminder > span, div.interval_item_reminder > span, div.day_item_reminder > span {
+	color:var(--color2);
+	font-family: Tahoma;
+	letter-spacing: 0.1em;
+	font-size: 0.8em;
+	line-height: 1;
+}
+
+div.month_item_reminder{
+	background-color:var(--color6);
+}
+
+div.number_item_reminder{
+	background-color:var(--color7);
+}
+
+div.time_item_reminder{
+	background-color:var(--color8);
+}
+
+div.interval_item_reminder{
+	background-color:var(--color9);
+}
+
+div.day_item_reminder{
+	background-color:var(--color10);
+}
+
+div.text_no_reminders{
+	height: 1.5em;
+}
+
+div.text_no_reminders > span{
+	color:var(--color11);
+	font-family: Tahoma;
+	letter-spacing: 0.1em;
+}
+
+i.icon_add_new_remind{
+	display:block;
+	width:2.5em;
+	height:2.5em;
+	background-size: 70% 70%;
+	background-position: 50% 50%;
+	background-repeat:no-repeat;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTI4IDEyOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Zz48bGluZSBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojOGI4YjhiO3N0cm9rZS13aWR0aDoxMjtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIHgxPSIxMy43ODciIHgyPSIxMTQuMjEzIiB5MT0iNjQuMDAxIiB5Mj0iNjQuMDAxIi8+PGxpbmUgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzhiOGI4YjtzdHJva2Utd2lkdGg6MTI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiB4MT0iNjQiIHgyPSI2NCIgeTE9IjEzLjc4NyIgeTI9IjExNC4yMTMiLz48L2c+PC9zdmc+);
+	border: 0.1em solid var(--color12);
+	border-radius: 50%;
+	transition:transform 0.25s;
+}
+
+i.icon_add_new_remind:hover{
+	transform: rotate(180deg);
+}
+
+div.block_add_new_remind_{
+	height:3.5em;
+}
+
+div.block_add_new_remind{
+	width: 2.5em;
+	height:3.5em;
+}
+
+div.content_add_or_edit_remind_window{
+	/* height: 25em; */
+	margin: 0em 1.5em 1.5em 1.5em;
+}
+
+div.text_new_remind, div.type_new_remind, div.minute_new_remind, div.hour_and_minute_new_remind, div.number_new_remind, div.interval_new_remind, div.day_new_remind, div.month_new_remind, div.block_input_set_params{
+	height:2.5em;
+	border-bottom:0.1em solid var(--color13);
+	margin-bottom:1em;
+}
+
+div.header_text_new_remind, div.header_type_new_remind, div.header_minute_new_remind, div.header_hour_and_minute_new_remind, div.header_number_new_remind, div.header_interval_new_remind, div.header_day_new_remind, div.header_month_new_remind, div.header_month_new_remind{
+	height:0em;
+	transition:height 0.2s;
+}
+
+div.header_text_new_remind > span, div.header_text_new_remind > span.is_selected_color, div.header_type_new_remind > span, div.header_type_new_remind > span.is_selected_color, div.header_minute_new_remind > span, div.header_hour_and_minute_new_remind > span, div.header_number_new_remind > span, div.header_interval_new_remind > span, div.header_day_new_remind > span, div.header_month_new_remind > span, div.header_minute_new_remind > span.is_selected_color, div.header_hour_and_minute_new_remind > span.is_selected_color, div.header_number_new_remind > span.is_selected_color, div.header_interval_new_remind > span.is_selected_color, div.header_day_new_remind > span.is_selected_color, div.header_month_new_remind > span.is_selected_color{
+	color:var(--color11);
+	font-family: Tahoma;
+	letter-spacing: 0.1em;
+	top: 0.4em;
+	left: 0.2em;
+	transition:top 0.2s, left 0.1s;
+}
+
+div.header_text_new_remind > span.is_selected_color, div.header_type_new_remind > span.is_selected_color, div.header_minute_new_remind > span.is_selected_color, div.header_hour_and_minute_new_remind > span.is_selected_color, div.header_number_new_remind > span.is_selected_color, div.header_interval_new_remind > span.is_selected_color, div.header_day_new_remind > span.is_selected_color, div.header_month_new_remind > span.is_selected_color{
+	color:var(--color14);
+}
+
+textarea.input_text_new_remind{
+	resize: none;
+	outline: 0 !important;
+	-moz-appearance: none;
+	font-family: Tahoma;
+	color:var(--color11);
+	letter-spacing: 0.1em;
+	height:2.5em;
+	transition:height 0.2s;
+	background-color: transparent;
+}
+
+textarea.show_input_text_new_remind{
+	height:8em;
+}
+
+div.option_type_remind, div.option_day_remind, div.option_month_remind{
+	height:2.5em;
+}
+
+div.option_type_remind > span, div.option_day_remind > span, div.option_month_remind > span{
+	color:var(--color11);
+	font-family: Tahoma;
+	letter-spacing: 0.1em;
+}
+
+i.icon_radio{
+	display:block;
+	width:1.5em;
+	height:1.5em;
+	background-size: 100% 100%;
+	background-position: 50% 50%;
+	background-repeat:no-repeat;
+	margin-right:1em;
+}
+
+i.radio_no_select{
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAgMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iIzE5NmM2YyI+PHBhdGggZD0iTTEwIDJDNS41ODE3MiAyIDIgNS41ODE3MiAyIDEwQzIgMTQuNDE4MyA1LjU4MTcyIDE4IDEwIDE4QzE0LjQxODMgMTggMTggMTQuNDE4MyAxOCAxMEMxOCA1LjU4MTcyIDE0LjQxODMgMiAxMCAyWk0zIDEwQzMgNi4xMzQwMSA2LjEzNDAxIDMgMTAgM0MxMy44NjYgMyAxNyA2LjEzNDAxIDE3IDEwQzE3IDEzLjg2NiAxMy44NjYgMTcgMTAgMTdDNi4xMzQwMSAxNyAzIDEzLjg2NiAzIDEwWiIvPjwvc3ZnPg);
+}
+
+i.radio_select{
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAgMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iIzE5NmM2YyI+PHBhdGggZD0iTTEwIDE1QzEyLjc2MTQgMTUgMTUgMTIuNzYxNCAxNSAxMEMxNSA3LjIzODU4IDEyLjc2MTQgNSAxMCA1QzcuMjM4NTggNSA1IDcuMjM4NTggNSAxMEM1IDEyLjc2MTQgNy4yMzg1OCAxNSAxMCAxNVoiLz48cGF0aCBkPSJNMTAgMkM1LjU4MTcyIDIgMiA1LjU4MTcyIDIgMTBDMiAxNC40MTgzIDUuNTgxNzIgMTggMTAgMThDMTQuNDE4MyAxOCAxOCAxNC40MTgzIDE4IDEwQzE4IDUuNTgxNzIgMTQuNDE4MyAyIDEwIDJaTTMgMTBDMyA2LjEzNDAxIDYuMTM0MDEgMyAxMCAzQzEzLjg2NiAzIDE3IDYuMTM0MDEgMTcgMTBDMTcgMTMuODY2IDEzLjg2NiAxNyAxMCAxN0M2LjEzNDAxIDE3IDMgMTMuODY2IDMgMTBaIi8+PC9zdmc+);
+}
+
+div.comment_remind{
+	margin-bottom:1em;
+}
+
+div.comment_remind > span{
+	color:var(--color11);
+	font-family: Tahoma;
+	letter-spacing: 0.1em;
+}
+
+input.input_minute_remind, input.input_number_remind, input.input_hour_remind {
+	width:1.5em;
+}
+
+input.input_interval_remind {
+	width:3.5em;
+}
+
+div.text_minute_set_params, div.text_number_set_params, div.text_hour_set_params, div.text_interval_set_params{
+	width:4.3em;
+	height:2.5em;
+	margin-left: 0.5em;
+}
+
+div.text_number_set_params{
+	width: 7.9em;
+}
+
+div.text_minute_set_params span, div.text_number_set_params span, div.text_hour_set_params span, div.text_interval_set_params span{
+	color:var(--color17);
+	font-family: Tahoma;
+	letter-spacing: 0.1em;
+}
+
+button {
+	border:0;
+	font-family: Tahoma;
+	letter-spacing: 0.1em;
+	background-color:transparent;
+	height:2.5em;
+	border-radius: 0.3em;
+}
+
+button:hover {
+	background-color:var(--color15);
+}
+
+button:active {
+	transform: translateY(0.1em);
+}
+
+button.bt_set_minute, button.bt_set_interval, button.bt_set_number, button.bt_delete_remind, button.bt_set_hour_and_minute, button.bt_save_remind{
+	width:8em;
+	color:var(--color14);
+	font-weight:bold;
+}
+
+div.is_error_color{
+	border-bottom: 0.1em solid #ff7272;
+}
+
+i.icon_animate_load_page{
+	width:8em;
+	height:8em;
+	background-size: 100% 100%;
+	background-position: 50% 50%;
+	background-repeat:no-repeat;
+	background-image: url(/img/logo.jpg);
+	border-radius: 50%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin:auto;
+  animation-duration: 1s;
+  animation-name: flashing;
+	animation-iteration-count: infinite;
+}
+
+@keyframes flashing {
+  0% {
+		transform: scale(1);
+		opacity:1;
+  }
+  50% {
+		transform: scale(0.85);
+		opacity:0.5;
+  }
+}
+
+div.block_input_hour_and_minute{
+	width:14em;
+}
+
+/* @media (min-width: 1024px) {
+	body{
+		font-size:0.66rem;
+	}
+}
+
+@media (min-width: 1163px) {
+	body{
+		font-size:0.76rem;
+	}
+}
+
+@media (min-width: 1280px) {
+	body{
+		font-size:0.85rem;
+	}
+}
+
+@media (min-width: 1422px) {
+	body{
+		font-size:0.95rem;
+	}
+}
+
+@media (min-width: 1600px) {
+	body{
+		font-size:1.05rem;
+	}
+}
+
+@media (min-width: 1920px) {
+	body{
+		font-size:1.25rem;
+	}
+}
+
+@media (min-width: 2560px) {
+	body{
+		font-size:1.7rem;
+	}
+}
+
+@media (min-width: 3840px) {
+	body{
+		font-size:2.55rem;
+	}
+}
+
+@media (min-width: 5120px) {
+	body{
+		font-size:2.67rem;
+	}
+} */
