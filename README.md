@@ -372,13 +372,19 @@ The reminder_app application is intuitive and easy to use, allows you to create 
 ![image_6](https://github.com/login9000/repository_1/blob/main/img/image_6.png?raw=true)
 
 
+## Developers
+
+[login9000](https://github.com/login9000)
+
 ## What are my plans...
 
 I want to make it possible for the application to send reminders to a group or channel, as well as to my contacts
 
 
+### License
 
-MIT License
+MIT
+
 
 
 
