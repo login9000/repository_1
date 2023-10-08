@@ -331,8 +331,53 @@ If you completed all the above procedures without errors, then it’s time to ch
 
 The application logo should appear in front of you for a moment
 
-![2121.jpg](https://github.com/login9000/repository_1/blob/main/2121.jpg?raw=true)
+![image_1](https://github.com/login9000/repository_1/blob/main/img/image_1.jpg?raw=true)
 
-https://github.com/login9000/repository_1/blob/main/2121.jpg?raw=true
+And then
+
+![image_2](https://github.com/login9000/repository_1/blob/main/img/image_2.png?raw=true)
+
+Click on the plus button, a window will open to add a new reminder
+
+![image_3](https://github.com/login9000/repository_1/blob/main/img/image_3.jpg?raw=true)
+
+Fill in the required fields and click Save.
+
+![image_4](https://github.com/login9000/repository_1/blob/main/img/image_4.jpg?raw=true)
+
+The application works with the following types of reminders:
+
+<b>each hour</b> - this type is suitable for reminders that you need to check your balance on some resource, for example, you have been credited with money but it has not arrived yet, and you can receive a reminder every hour at a certain minute that you need to double-check your balance
+
+<b>every few hours</b> - this type is suitable for reminders that it’s time to take a break from working at the computer, or it’s time to walk the dog (every 4 hours for example)
+
+<b>at a certain hour</b> - this type is suitable for reminders that it’s time to go to bed, if you often stay up late at the computer and want to learn to go to bed earlier, then the application can help you, it will send you a reminder every day at a certain hour and certain minute
+
+<b>every few days</b> - this type is suitable for reminders that you need to visit a doctor or go for procedures, for example every 3 days
+
+<b>at a certain day</b> - this type is suitable for reminders that you need to pick up your salary, for example, your salary comes to you every Friday and you constantly forget to pick it up on that day, the application will remind you of this
+
+<b>on a certain date</b> - this type is suitable for reminders that it is necessary to send a tax report to the bank, the application will send a reminder every month on a certain date at a certain hour and minute
+
+<b>in a certain month</b> - this type is suitable for reminders that your friend has a birthday, or you have an important meeting every year on a certain date
+
+<b>every few months</b> - this type is suitable for reminders that, for example, every 5 months on the 14th at 13:45 you have some important meeting
+
+<b>specific date (once)</b> - this type is suitable for one-time reminders on a specific date, then the reminder is automatically deleted from the database
+
+![image_5](https://github.com/login9000/repository_1/blob/main/img/image_5.jpg?raw=true)
+
+The reminder_app application is intuitive and easy to use, allows you to create an unlimited number of reminders, as well as edit and delete them
+
+![image_6](https://github.com/login9000/repository_1/blob/main/img/image_6.jpg?raw=true)
+
+
+<b>What are my plans...</b> 
+I want to make it possible for the application to send reminders to a group or channel, as well as to my contacts
+
+MIT License
+
+
+
 
 
