@@ -339,7 +339,7 @@ And then
 
 Click on the plus button, a window will open to add a new reminder
 
-![image_3](https://github.com/login9000/repository_1/blob/main/img/image_3.jpg?raw=true)
+![image_3](https://github.com/login9000/repository_1/blob/main/img/image_3.png?raw=true)
 
 Fill in the required fields and click Save.
 
@@ -365,11 +365,11 @@ The application works with the following types of reminders:
 
 <b>specific date (once)</b> - this type is suitable for one-time reminders on a specific date, then the reminder is automatically deleted from the database
 
-![image_5](https://github.com/login9000/repository_1/blob/main/img/image_5.jpg?raw=true)
+![image_5](https://github.com/login9000/repository_1/blob/main/img/image_5.png?raw=true)
 
 The reminder_app application is intuitive and easy to use, allows you to create an unlimited number of reminders, as well as edit and delete them
 
-![image_6](https://github.com/login9000/repository_1/blob/main/img/image_6.jpg?raw=true)
+![image_6](https://github.com/login9000/repository_1/blob/main/img/image_6.png?raw=true)
 
 
 <b>What are my plans...</b> 
