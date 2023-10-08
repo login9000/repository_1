@@ -1,14 +1,14 @@
-<b>Why is this application needed?</b>
+## Why is this application needed?
 
 How often have you forgotten about something, how often have you missed some important dates, forgotten to watch some online broadcast of someone’s birthday, called the tax office on Thursday, sent a letter to a friend in the morning? This is a telegram application that will notify you about events that are important to you so that you do not forget about them. Just enter the text for the reminder and some other data, the application will start working. It will be useful for absolutely everyone. The fully functional version of the application is now available here https://t.me/reminder_app3_bot
 
-<b>Peculiarities</b>
+## Peculiarities
 
 On the backend side, python with the tornado framework plus aiogram is used. The frontend is written in javascript with the jquery library and the tailwindcss css framework. The mysql database is used (although it was possible to get by with regular files).
 The application has been translated into several languages, including: English, German, Russian and Korean. Depending on what language is configured on the user’s device, the application will be displayed in the appropriate language; if the language is not found (for example, the user’s language is Chinese), then the application is displayed in English by default.
 All commands for the terminal that you will see below according to the instructions will be made for the Debian operating system.
 
-<b>Minimum requirements</b>
+## Minimum requirements
 
 1) Domain with https
 2) Operating system: Ubuntu / Debian / Centos
@@ -18,7 +18,7 @@ All commands for the terminal that you will see below according to the instructi
 6) MySQL: 5.7
 7) MariaDB: 10.4
 
-<b>Install required dependencies</b>
+## Install required dependencies
 
 1) install dependencies for python3
 
@@ -37,7 +37,7 @@ pip3 install python-dotenv
 pip3 install tornado
 ```
 
-<b>Installing and configuring mysql server:</b>
+## Installing and configuring mysql server
 
 1) Install Mysql (if you already have mysql installed, you can skip this step). Instead of MySQL, we will use its improved and optimized version - MariaDB. It is a very reliable and scalable SQL server with many improvements and enhancements.
 
@@ -168,7 +168,7 @@ and then check
 service mysql status
 ```
 
-<b>Installation, configuration and use of the reminder_app application:</b>
+## Installation, configuration and use of the reminder_app application
 
 1) Create a directory in which the application will be located, I recommend the /usr/local directory, but you can use any other one.
 
@@ -299,7 +299,7 @@ journalctl -u reminder_app.service -n 100 -e
 
 the last 100 lines with entries about possible reminder_app application errors, to return to the terminal, enter "q" and "enter".
 
-<b>Usage</b>
+## Usage
 
 You can stop the application from the terminal with the command 
 
@@ -372,7 +372,7 @@ The reminder_app application is intuitive and easy to use, allows you to create 
 ![image_6](https://github.com/login9000/repository_1/blob/main/img/image_6.png?raw=true)
 
 
-<b>What are my plans...</b>
+## What are my plans...
 
 I want to make it possible for the application to send reminders to a group or channel, as well as to my contacts
 
