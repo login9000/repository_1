@@ -120,7 +120,6 @@ usermod -aG sudo,www-data UserName
 where: UserName is the user name.
 
 3) Create a user and password for mysql under which it will work (if you have already created such a user, you can skip this step).
-Enter 
 
 ```
 mysql -uroot -p<MYPASSWORD>
@@ -138,7 +137,13 @@ where: newuser is UserName (the user of your operating system, not root) and pas
 GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'%';
 ```
 
-where: newuser is our user for mysql. Next, enter "FLUSH PRIVILEGES;" to update all access rights.
+where: newuser is our user for mysql. Next, enter
+
+```
+FLUSH PRIVILEGES;
+```
+
+to update all access rights.
 
 4) Next, create a database for the application (if you have already created a database with a specific name, you can skip this step)
 
@@ -216,7 +221,7 @@ You should end up with a tree like this (enter "tree" if you have this installed
 └── reminder_app.service
 ```
 
-2) Configuration of the reminder_app application. Open
+2) Configuration of the reminder_app application.
 
 ```
 nano .env
@@ -225,7 +230,8 @@ nano .env
 and set the options to the required values:
 
 <b>TELEGRAM_TOKEN</b> - a token from your telegram bot that is built into the reminder_app application, obtained using a special bot https://t.me/BotFather
-ADMIN_ID - admin id, since each telegram user has his own unique numeric id. You can leave it empty, but then the administrator in Telegram will not receive messages about errors in the operation of the reminder_app application, in which case it will be necessary to manually check the file with errors “other_errors.log”
+
+<b>ADMIN_ID</b> - admin id, since each telegram user has his own unique numeric id. You can leave it empty, but then the administrator in Telegram will not receive messages about errors in the operation of the reminder_app application, in which case it will be necessary to manually check the file with errors “other_errors.log”
 
 <b>HTTP_SERVER_PORT</b> - the port on which the http server of the reminder_app application will work, by default it is port 80, but if you already have some services on this port, for example nginx, then you can change this port to another. Please note that if you change the port to another, you will need to make additional settings for your domain on which the reminder_app application will be available, for example, you changed the port to 8088, then your application should be available at https://site.com: 8088/ I recommend not changing this port.
 
@@ -251,9 +257,9 @@ python3 reminder_app.py
 
 in the terminal (don't forget that you should be in the directory with the reminder_app application), if there are no errors in the terminal, and you see "[Info] Application launched" wait a few seconds, if there are still no errors then the application is probably running successfully. Press "ctrl + c" to stop the application.
 
-5) Setting up a service for the reminder_app application. The service is required to start, stop or check the status of the reminder_app application from the terminal. Open the file "nano reminder_app.service" pay attention to "python3.9" if the version of python that you have installed matches version 3.9 then good, if it is different then make the appropriate changes to the reminder_app.service file. Next, pay attention to the path to the application, by default it is “/usr/local/reminder_app/reminder_app.py” leave it as it is if you installed the application in the /usr/local/ directory as I recommended, if not, then specify the correct path.
+4) Setting up a service for the reminder_app application. The service is required to start, stop or check the status of the reminder_app application from the terminal. Open the file "nano reminder_app.service" pay attention to "python3.9" if the version of python that you have installed matches version 3.9 then good, if it is different then make the appropriate changes to the reminder_app.service file. Next, pay attention to the path to the application, by default it is “/usr/local/reminder_app/reminder_app.py” leave it as it is if you installed the application in the /usr/local/ directory as I recommended, if not, then specify the correct path.
 
-6) Completing all settings of the reminder_app application. Go to the directory
+5) Completing all settings of the reminder_app application. Go to the directory
 
 ```
 cd /etc/systemd/system
