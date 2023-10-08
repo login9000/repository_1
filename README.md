@@ -53,7 +53,7 @@ mysql_secure_installation
 
 First you need to enter the current root password, enter the password and press "enter", then it will ask us whether to switch to unix_socket authentication, enter "y", then it will ask us if we want to change the root password, press "n". Then it will ask whether to disable guest accounts, be sure to put “y”, after which it will ask whether to disable remote access to the database via root, write “y”, then it will ask whether to delete the ban test database, put “y”, then it will ask whether to restart the privilege table , put "y".
 
-3) Setting up Mysql (if you already have mysql configured, you can skip this step). We need to configure the minimum required configuration.
+2) Setting up Mysql (if you already have mysql configured, you can skip this step). We need to configure the minimum required configuration.
 
 ```
 nano /etc/mysql/mariadb.conf.d/50-server.cnf
