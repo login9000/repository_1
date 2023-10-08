@@ -194,6 +194,12 @@ You should end up with a tree like this (enter "tree" if you have this installed
 │   │   └── Tahoma.ttf
 │   ├── img
 │   │   └── logo.jpg
+│   │   ├── image_1.jpg
+│   │   ├── image_2.png
+│   │   ├── image_3.png
+│   │   ├── image_4.jpg
+│   │   ├── image_5.png
+│   │   ├── image_6.png
 │   ├── index.html
 │   ├── js
 │   │   ├── jquery-3.6.0.min.js
