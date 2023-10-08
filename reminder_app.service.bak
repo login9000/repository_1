@@ -1,8 +1,0 @@
-[Unit]
-Description=Lis skins bot app
-[Service]
-Type=simple
-User=root
-ExecStart=/usr/bin/python3.9 /usr/local/lis_skins_bot_app/lis_skins_bot_app.py
-[Install]
-WantedBy=multi-user.target
