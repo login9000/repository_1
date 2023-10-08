@@ -331,3 +331,8 @@ If you completed all the above procedures without errors, then it’s time to ch
 
 The application logo should appear in front of you for a moment
 
+![2121.jpg](https://github.com/login9000/repository_1/blob/main/2121.jpg?raw=true)
+
+https://github.com/login9000/repository_1/blob/main/2121.jpg?raw=true
+
+
