@@ -1,0 +1,8 @@
+[Unit]
+Description=Reminder app
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python3.9 /usr/local/reminder_app/reminder_app.py
+[Install]
+WantedBy=multi-user.target
