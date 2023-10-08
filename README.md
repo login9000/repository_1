@@ -1,4 +1,4 @@
-## Why is this application needed?
+## About
 
 How often have you forgotten about something, how often have you missed some important dates, forgotten to watch some online broadcast of someone’s birthday, called the tax office on Thursday, sent a letter to a friend in the morning? This is a telegram application that will notify you about events that are important to you so that you do not forget about them. Just enter the text for the reminder and some other data, the application will start working. It will be useful for absolutely everyone. The fully functional version of the application is now available here https://t.me/reminder_app3_bot
 
