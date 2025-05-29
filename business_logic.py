@@ -8,7 +8,8 @@ import traceback
 from urllib.parse import quote, unquote
 from dotenv import load_dotenv # pip3 install python-dotenv
 from log_functions import Log_functions
-from sanic.request import Request
+from sanic.request import Request # pip3 install sanic
+from sanic.response import json as json2
 from connect_to_service_functions import Connect_to_service_functions
 from color_print import Color_print
 
