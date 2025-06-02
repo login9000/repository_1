@@ -174,13 +174,25 @@ class Business_logic():
 		try:
 
 			sql = request.args.get('sql')
+			args = request.args.get('args')
 
 			if sql is None:
 				return {'error': 'INCORECT_SQL_PARAM'}
 
+			if args is None:
+				return {'error': 'INCORECT_ARGS_PARAM'}
+
+			ex = re.split(',', args)
+			args = []
+			for item in ex:
+				args.append(unquote(item))
+
 			sql = unquote(sql)
 
-			result, err = await self.connect_to_service_functions.mysql_query(sql = sql)
+			if len(args) > 0:
+				result, err = await self.connect_to_service_functions.mysql_query(sql = sql, args = args)
+			else:
+				result, err = await self.connect_to_service_functions.mysql_query(sql = sql)
 			if err: raise Exception(err)
 
 			return {'response': result}
@@ -195,6 +207,8 @@ class Business_logic():
 
 		try:
 			
+			return {'response': 'exit'}
+		
 			aes_key = '4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8'
 			aes_key2 = '4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8'
 			aes_key3 = '4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8'
