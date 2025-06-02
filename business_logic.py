@@ -207,13 +207,13 @@ class Business_logic():
 
 		try:
 			
-			return {'response': 'exit'}
+			# return {'response': 'exit'}
 		
 			aes_key = '4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8'
 			aes_key2 = '4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8'
 			aes_key3 = '4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8'
 
-			for item in range(10):
+			for item in range(10, 1000):
 				
 				date = '2025-06-02T17:42:26'
 				ip = ''
