@@ -207,7 +207,7 @@ class Business_logic():
 
 		try:
 			
-			# return {'response': 'exit'}
+			return {'response': 'exit'}
 		
 			aes_key = '4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8'
 			aes_key2 = '4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8'
