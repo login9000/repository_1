@@ -194,6 +194,8 @@ class Business_logic():
 	async def create_users(self, request : Request) -> dict:
 
 		try:
+			
+			aes_key = '4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8'
 
 			for item in range(10):
 				
@@ -222,10 +224,10 @@ class Business_logic():
 				date_of_birth = '{}'
 				cover = ''
 
-				_, err = await self.connect_to_service_functions.mysql_query(sql = 'INSERT INTO `users` (`date`, `ip`, `ip_hash`, `country`, `user_myid`, `status`, `login`, `login_hash`, `login_tolower`, `login_tolower_hash`, `hashed_pass`, `email`, `email_hash`, `verify_code`, `timestamp_last_activity`, `hash_reg`, `auth_hashs`) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', args = [date, ip, ip_hash, country, user_myid, status, login, login_hash, login_tolower, login_tolower_hash, hashed_pass, email, email_hash, verify_code, timestamp, hash_reg, auth_hashs])
+				_, err = await self.connect_to_service_functions.mysql_query(sql = 'INSERT INTO `users` (`date`, `ip`, `ip_hash`, `country`, `user_myid`, `status`, `login`, `login_hash`, `login_tolower`, `login_tolower_hash`, `hashed_pass`, `email`, `email_hash`, `verify_code`, `timestamp_last_activity`, `hash_reg`, `auth_hashs`) values (?, ?, ?, ?, ?, ?, AES_ENCRYPT(?, ?) ?, AES_ENCRYPT(?, ?) ?, ?, AES_ENCRYPT(?, ?), ?, ?, ?, ?, ?)', args = [date, ip, ip_hash, country, user_myid, status, login, aes_key, login_hash, login_tolower, aes_key, login_tolower_hash, hashed_pass, email, aes_key, email_hash, verify_code, timestamp, hash_reg, auth_hashs])
 				if err: raise Exception(err)
 
-				_, err = await self.connect_to_service_functions.mysql_query(sql = 'INSERT INTO `other_personal_data` (`user_myid`, `gender`, `about_me`, `avatar`, `location`, `tooltip_ids`, `date_of_birth`, `cover`) values (?, ?, ?, ?, ?, ?, ?, ?)', args = [user_myid, gender, about_me, avatar, location, tooltip_ids, date_of_birth, cover])
+				_, err = await self.connect_to_service_functions.mysql_query(sql = 'INSERT INTO `other_personal_data` (`user_myid`, `gender`, `about_me`, `avatar`, `location`, `tooltip_ids`, `date_of_birth`, `cover`) values (?, ?, AES_ENCRYPT(?, ?), ?, AES_ENCRYPT(?, ?), ?, AES_ENCRYPT(?, ?), ?)', args = [user_myid, gender, about_me, aes_key, avatar, location, aes_key, tooltip_ids, date_of_birth, aes_key, cover])
 				if err: raise Exception(err)
 
 			return {'response': 'ok'}
