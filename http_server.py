@@ -8,6 +8,7 @@ from business_logic import Business_logic
 from color_print import Color_print
 from sanic.response import HTTPResponse # pip3 install sanic
 
+
 document_root = re.sub(r'/[^/]+$', '', os.path.abspath(__file__).replace(u'\\', u'/'))
 app_version = '1.0'
 bl = None
@@ -35,6 +36,11 @@ if __name__ != '__main__':
 	@sanic.get('/api/v1/select')
 	async def select(request: Request):
 		result = await bl.select(request)
+		return bl.prepare_response(result)
+
+	@sanic.post('/api/v1/create_users')
+	async def create_users(request: Request):
+		result = await bl.create_users(request)
 		return bl.prepare_response(result)
 	
 if __name__ == '__main__':

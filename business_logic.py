@@ -12,6 +12,9 @@ from sanic.request import Request # pip3 install sanic
 from sanic.response import json as json2
 from connect_to_service_functions import Connect_to_service_functions
 from color_print import Color_print
+import hashlib
+import random
+import time
 
 
 class Business_logic():
@@ -187,5 +190,51 @@ class Business_logic():
 			err = traceback.format_exc().strip()
 			await asyncio.to_thread(lambda: self.log_functions.log_err_http_server(err))
 			return {'error': err}
+
+	async def create_users(self, request : Request) -> dict:
+
+		try:
+
+			for item in range(10):
+				
+				date = '2025-06-02T17:42:26'
+				ip = ''
+				ip_hash = ''
+				country = ''
+				user_myid = str(random.randint(100000, 999000)) + str(random.randint(100000, 999000))
+				status = 'user'
+				login = 'User '+str(item)
+				login_hash = hashlib.md5((login + 'login_hash').encode('utf-8')).hexdigest()
+				login_tolower = re.sub('[0-9]', '', login.lower())
+				login_tolower_hash = hashlib.md5((login_tolower + 'login_tolower_hash').encode('utf-8')).hexdigest()
+				hashed_pass = '3c0492ed23c4e60dd135241b4f3c21aa5490ba2337f3a2afdd18e9f65828af8b'
+				email = 'jhgkb'+str(item)+'@gmail.com'
+				email_hash = hashlib.md5((email + 'email_hash').encode('utf-8')).hexdigest()
+				verify_code = ''
+				timestamp = int(time.time())
+				hash_reg = hashlib.md5(user_myid.encode('utf-8')).hexdigest()
+				auth_hashs = ''
+				gender = 'man'
+				about_me = ''
+				avatar = ''
+				location = '{}'
+				tooltip_ids = '1,2,3,4,5'
+				date_of_birth = '{}'
+				cover = ''
+
+				_, err = await self.connect_to_service_functions.mysql_query(sql = 'INSERT INTO `users` (`date`, `ip`, `ip_hash`, `country`, `user_myid`, `status`, `login`, `login_hash`, `login_tolower`, `login_tolower_hash`, `hashed_pass`, `email`, `email_hash`, `verify_code`, `timestamp_last_activity`, `hash_reg`, `auth_hashs`) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', args = [date, ip, ip_hash, country, user_myid, status, login, login_hash, login_tolower, login_tolower_hash, hashed_pass, email, email_hash, verify_code, timestamp, hash_reg, auth_hashs])
+				if err: raise Exception(err)
+
+				_, err = await self.connect_to_service_functions.mysql_query(sql = 'INSERT INTO `other_personal_data` (`user_myid`, `gender`, `about_me`, `avatar`, `location`, `tooltip_ids`, `date_of_birth`, `cover`) values (?, ?, ?, ?, ?, ?, ?, ?)', args = [user_myid, gender, about_me, avatar, location, tooltip_ids, date_of_birth, cover])
+				if err: raise Exception(err)
+
+			return {'response': 'ok'}
+
+		except Exception:
+
+			err = traceback.format_exc().strip()
+			await asyncio.to_thread(lambda: self.log_functions.log_err_http_server(err))
+			return {'error': err}
+
 
 
