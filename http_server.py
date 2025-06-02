@@ -27,6 +27,8 @@ bl.init_connect_to_service_functions()
 
 if __name__ != '__main__':
 
+	sanic.config.REQUEST_TIMEOUT = 5
+	sanic.config.RESPONSE_TIMEOUT = 300
 	sanic.static('/', document_root+'/public')
 
 	@sanic.get('/')
