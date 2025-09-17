@@ -11,7 +11,7 @@
     </div>
   </div>
 
-  <div class="profile-container" v-html="components.profile_window"></div>
+  <!--<div class="profile-container" v-html="components.profile_window"></div>-->
 
 
 </template>
