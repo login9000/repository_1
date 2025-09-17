@@ -15,69 +15,142 @@ export const useUserStore = defineStore('user', () => {
 
     const login = async () => {
         try {
-            const response = await fetch('/api/v1/check_auth_disco');
-            const data = await response.json();
 
-            if (!response.ok) {
-                window.location.href = '/#' + data.error;
-            } else {
+					var fetch_err_text = '';
+					var controller = new AbortController();
+					var timeout = setTimeout((controller) => controller.abort(), 15000, controller);
+					try {
+						var response = await fetch(API_URL + '/api/v1/check_auth_disco', {
+							mode: 'cors', // no-cors, *cors, same-origin
+							credentials: 'include', // include, *same-origin, omit
+							signal: controller.signal,
+							method: 'GET'
+						});
+					} catch (err) {
+						fetch_err_text = err.stack ? String(err.stack) : err;
+					}
+					clearTimeout(timeout);
+					if (fetch_err_text === '') {
+							if (response.ok) {
+								
+									try {
+										var result = await response.text();
+										result = JSON.parse(result);
+										if(result.response){
 
-                globalThis.WEB_SOCKET = new WebSocket(WS_URL + `wss`);
-                WEB_SOCKET.onmessage = (event) => {
-                    try {
-                        const data = JSON.parse(event.data);
-                        switch (data.type) {
-                            case "error":
-                                window.location.href = '/#' + data.message;
-                                break;
-                        }
-                    } catch (e) {
-                        window.location.href = '/#BAD_REQUEST';
-                    }
-                };
+												globalThis.WEB_SOCKET = new WebSocket(WS_URL + '/disco/wss');
+												WEB_SOCKET.onmessage = (event) => {
+													try {
+														const data = JSON.parse(event.data);
+														switch (data.type) {
+															case "error":
+																var error_info = new Error().stack.split('\n')[1].replace(/.+at (.+)\((.+):([0-9]+):[0-9]+\)/, function(a, name_function, file_path, line){return '(file_path: '+file_path.replace(/\\/g, '/')+', function: '+name_function.replace(/ $/, '')+', line: '+line+') ';});
+																alert(error_info+'\n'+data.message);
+																break;
+														}
+													} catch (err) {
+														alert(err.stack ? String(err.stack) : err);
+													}
+												};
 
-                
-                WEB_SOCKET.addEventListener("error", (event) => {
-                    emitter.emit('inactive-screen', true);
-                    window.location.reload();
-                });
-                WEB_SOCKET.addEventListener("close", (event) => {
-                    emitter.emit('inactive-screen', true);
-                    window.location.reload();
-                });
+												WEB_SOCKET.addEventListener("error", (event) => {
+														emitter.emit('inactive-screen', true);
+														window.location.reload();
+												});
+												WEB_SOCKET.addEventListener("close", (event) => {
+														emitter.emit('inactive-screen', true);
+														window.location.reload();
+												});
+								
+												isAuthenticated.value = true;
+												await fetchUserData();
 
+										}else{
+											if(result.error){
+												var error_info = new Error().stack.split('\n')[1].replace(/.+at (.+)\((.+):([0-9]+):[0-9]+\)/, function(a, name_function, file_path, line){return '(file_path: '+file_path.replace(/\\/g, '/')+', function: '+name_function.replace(/ $/, '')+', line: '+line+') ';});
+												alert(error_info+'\n'+result.error);
+											}
+										}
+									} catch (err) {
+										alert(err.stack ? String(err.stack) : err);
+									}
+							}else{
+								var result = await response.text();
+								if(result === ''){
+												result = response.statusText;
+								}
+								var error_info = new Error().stack.split('\n')[1].replace(/.+at (.+)\((.+):([0-9]+):[0-9]+\)/, function(a, name_function, file_path, line){return '(file_path: '+file_path.replace(/\\/g, '/')+', function: '+name_function.replace(/ $/, '')+', line: '+line+') ';});
+								alert(error_info+'\n'+result);
+							}
+					}else{
+						var error_info = new Error().stack.split('\n')[1].replace(/.+at (.+)\((.+):([0-9]+):[0-9]+\)/, function(a, name_function, file_path, line){return '(file_path: '+file_path.replace(/\\/g, '/')+', function: '+name_function.replace(/ $/, '')+', line: '+line+') ';});
+						alert(error_info+'\n'+fetch_err_text);
+					}
 
-
-                isAuthenticated.value = true;
-                await fetchUserData();
-            }
-        } catch (error) {
-            window.location.href = '/#BAD_REQUEST';
+        } catch (err) {
+           alert(err.stack ? String(err.stack) : err);
         }
     };
 
     const fetchUserData = async () => {
         try {
-            const response = await fetch('/api/v1/get_other_variables?target=disco');
 
-            if (!response.ok) {
-                window.location.href = '/#BAD_REQUEST';
-            }
-            const data = await response.json();
-            user.value = data.response;
+						var fetch_err_text = '';
+						var controller = new AbortController();
+						var timeout = setTimeout((controller) => controller.abort(), 15000, controller);
+						try {
+							var response = await fetch(API_URL + '/api/v1/get_other_variables?target=disco', {
+								mode: 'cors', // no-cors, *cors, same-origin
+								credentials: 'include', // include, *same-origin, omit
+								signal: controller.signal,
+								method: 'GET'
+							});
+						} catch (err) {
+										fetch_err_text = err.stack ? String(err.stack) : err;
+						}
+						clearTimeout(timeout);
+						if (fetch_err_text === '') {
+							if (response.ok) {
+									try {
+										var result = await response.text();
+										result = JSON.parse(result);
+										if(result.response){
 
-            user.value.id = user.value.user_myid;
-            user.value.username = user.value.login;
+												user.value = result.response;
+												user.value.id = user.value.user_myid;
+												user.value.username = user.value.login;
 
-            if (typeof (user.value.csrf_token) == 'string') {
-                let meta = document.createElement('meta');
-                meta.setAttribute('name', 'csrf-token');
-                meta.setAttribute('content', user.value.csrf_token);
-                document.getElementsByTagName('head')[0].appendChild(meta);
-            }
+												if (typeof (user.value.csrf_token) == 'string') {
+													let meta = document.createElement('meta');
+													meta.setAttribute('name', 'csrf-token');
+													meta.setAttribute('content', user.value.csrf_token);
+													document.getElementsByTagName('head')[0].appendChild(meta);
+												}
 
-        } catch (error) {
-            window.location.href = '/#BAD_REQUEST';
+										}else{
+											if(result.error){
+												var error_info = new Error().stack.split('\n')[1].replace(/.+at (.+)\((.+):([0-9]+):[0-9]+\)/, function(a, name_function, file_path, line){return '(file_path: '+file_path.replace(/\\/g, '/')+', function: '+name_function.replace(/ $/, '')+', line: '+line+') ';});
+												alert(error_info+'\n'+result.error);
+											}
+										}
+									} catch (err) {
+													alert(err.stack ? String(err.stack) : err);
+									}
+							}else{
+								var result = await response.text();
+								if(result === ''){
+										result = response.statusText;
+								}
+								var error_info = new Error().stack.split('\n')[1].replace(/.+at (.+)\((.+):([0-9]+):[0-9]+\)/, function(a, name_function, file_path, line){return '(file_path: '+file_path.replace(/\\/g, '/')+', function: '+name_function.replace(/ $/, '')+', line: '+line+') ';});
+								alert(error_info+'\n'+result);
+							}
+						}else{
+							var error_info = new Error().stack.split('\n')[1].replace(/.+at (.+)\((.+):([0-9]+):[0-9]+\)/, function(a, name_function, file_path, line){return '(file_path: '+file_path.replace(/\\/g, '/')+', function: '+name_function.replace(/ $/, '')+', line: '+line+') ';});
+							alert(error_info+'\n'+fetch_err_text);
+						}
+
+        } catch (err) {
+           alert(err.stack ? String(err.stack) : err);
         }
     };
 

@@ -247,14 +247,14 @@ defineExpose({ components, isPrivateChatVisible });
       </template>
     </div>
   </Suspense>
-  <div v-html="components.media_window"></div>
+  <!--<div v-html="components.media_window"></div>
   <div v-html="components.black_list_window"></div>
   <div v-html="components.error_window"></div>
   <div v-html="components.crop_avatar_window"></div>
   <div v-html="components.choice_locations_window"></div>
   <div v-html="components.friends_list_window"></div>
   <div v-html="components.confirm_delete_friend_window"></div>
-  <div v-html="components.complaint_window"></div>
+  <div v-html="components.complaint_window"></div>-->
 </template>
 
 <style scoped>
