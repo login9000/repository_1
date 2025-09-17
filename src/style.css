@@ -1,0 +1,11 @@
+body.game-body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.media_window {
+  position: fixed;
+  z-index: 9999 !important;
+  top: 0px;
+}

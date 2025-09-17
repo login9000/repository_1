@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M128 16L50 144H108L88 240L178 112H120L128 16Z" fill="#00E676" stroke="#00C853" stroke-width="12" stroke-linejoin="round"/>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="5" result="blur"/>
+    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+  </filter>
+  <g filter="url(#glow)">
+    <path d="M128 16L50 144H108L88 240L178 112H120L128 16Z" fill="#00E676" fill-opacity="0.5"/>
+  </g>
+</svg>

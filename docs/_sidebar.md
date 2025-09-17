@@ -1,0 +1,18 @@
+-   Документация по проекту Disco
+    -   Api (WebSocket)
+        -   [Координаты пользователей](users/coordinates.md)
+            -   Сообщения с Backend
+                -   [initial_players](users/coordinates/intial_players.md)
+                -   [player_joined](users/coordinates/player_joined.md)
+                -   [player_moved](users/coordinates/player_moved.md)
+                -   [player_teleported](users/coordinates/player_teleported.md)
+                -   [player_leaved](users/coordinates/player_leaved.md)
+            -   Сообщения с Frontend
+                -   [position_update](users/coordinates/position_update.md)
+                -   [teleport](users/coordinates/teleport.md)
+        - [Сообщения пользователей](users/messages.md)
+            -   Сообщения с Backend
+                - [private_message](users/messages/private_message_backend.md)
+            -   Сообщения с Frontend
+                - [private_message](users/messages/private_message_frontend.md)
+

@@ -1,0 +1,19 @@
+body.game-body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-size: inherit !important;
+}
+
+.media_window {
+  position: fixed;
+  z-index: 9999 !important;
+  top: 0px;
+}
+
+.media_window .content_media_window, .media_window .header_media_window {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: none !important;
+}

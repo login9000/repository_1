@@ -1,0 +1,574 @@
+{
+  "_phaser.D2i8FZdm.js": {
+    "file": "assets/phaser.D2i8FZdm.js",
+    "name": "phaser"
+  },
+  "assets/anim/Sit.png": {
+    "file": "assets/Sit.BrzfbkVd.png",
+    "src": "assets/anim/Sit.png"
+  },
+  "assets/anim/anim_portal.png": {
+    "file": "assets/anim_portal.CleoK8Bm.png",
+    "src": "assets/anim/anim_portal.png"
+  },
+  "assets/anim/bar-table.png": {
+    "file": "assets/bar-table.CgTdIqsV.png",
+    "src": "assets/anim/bar-table.png"
+  },
+  "assets/anim/candleslight.png": {
+    "file": "assets/candleslight.BvjavqCO.png",
+    "src": "assets/anim/candleslight.png"
+  },
+  "assets/anim/cloud_2.png": {
+    "file": "assets/cloud_2.Bt53iBoG.png",
+    "src": "assets/anim/cloud_2.png"
+  },
+  "assets/anim/cloud_small.png": {
+    "file": "assets/cloud_small.Cq6vOxmc.png",
+    "src": "assets/anim/cloud_small.png"
+  },
+  "assets/anim/dancepoll1.png": {
+    "file": "assets/dancepoll1.CJ3WEn1Y.png",
+    "src": "assets/anim/dancepoll1.png"
+  },
+  "assets/anim/dancepoll2.png": {
+    "file": "assets/dancepoll2.Dxgmwo3q.png",
+    "src": "assets/anim/dancepoll2.png"
+  },
+  "assets/anim/dancepoll_anim1.png": {
+    "file": "assets/dancepoll_anim1.CeV-UvkP.png",
+    "src": "assets/anim/dancepoll_anim1.png"
+  },
+  "assets/anim/dancepoll_anim2.png": {
+    "file": "assets/dancepoll_anim2.U5DChZ-E.png",
+    "src": "assets/anim/dancepoll_anim2.png"
+  },
+  "assets/anim/fxp2.png": {
+    "file": "assets/fxp2.CsIlLgAX.png",
+    "src": "assets/anim/fxp2.png"
+  },
+  "assets/anim/kamin.png": {
+    "file": "assets/kamin.DAF-R2Nb.png",
+    "src": "assets/anim/kamin.png"
+  },
+  "assets/anim/lamplight.png": {
+    "file": "assets/lamplight.DamyJGT1.png",
+    "src": "assets/anim/lamplight.png"
+  },
+  "assets/anim/light_arka.png": {
+    "file": "assets/light_arka.tZj0iYBA.png",
+    "src": "assets/anim/light_arka.png"
+  },
+  "assets/anim/storlight.png": {
+    "file": "assets/storlight.D0SJiJCG.png",
+    "src": "assets/anim/storlight.png"
+  },
+  "assets/anim/table-light.png": {
+    "file": "assets/lamplight.DamyJGT1.png",
+    "src": "assets/anim/lamplight.png"
+  },
+  "assets/anim/table_anim.png": {
+    "file": "assets/table_anim.C652Lccm.png",
+    "src": "assets/anim/table_anim.png"
+  },
+  "assets/avatars/a1/stand.png": {
+    "file": "assets/stand.Fq697mzK.png",
+    "src": "assets/avatars/a1/stand.png"
+  },
+  "assets/avatars/a1/walking.png": {
+    "file": "assets/walking.BS28NYho.png",
+    "src": "assets/avatars/a1/walking.png"
+  },
+  "assets/avatars/a1/walking_back.png": {
+    "file": "assets/walking_back.CaK99MYL.png",
+    "src": "assets/avatars/a1/walking_back.png"
+  },
+  "assets/avatars/elvis/stand.png": {
+    "file": "assets/stand.CGNpgV4D.png",
+    "src": "assets/avatars/elvis/stand.png"
+  },
+  "assets/avatars/elvis/walk.png": {
+    "file": "assets/walk.DD51SGNm.png",
+    "src": "assets/avatars/elvis/walk.png"
+  },
+  "assets/avatars/elvis/walk_back.png": {
+    "file": "assets/walk_back.BQd3OdWA.png",
+    "src": "assets/avatars/elvis/walk_back.png"
+  },
+  "assets/avatars/g1/back.png": {
+    "file": "assets/back.S3LJLEDB.png",
+    "src": "assets/avatars/g1/back.png"
+  },
+  "assets/avatars/g1/frontr.png": {
+    "file": "assets/frontr.CXV0wocM.png",
+    "src": "assets/avatars/g1/frontr.png"
+  },
+  "assets/avatars/g1/st.png": {
+    "file": "assets/st.Y819hW_w.png",
+    "src": "assets/avatars/g1/st.png"
+  },
+  "assets/avatars/g2/back.png": {
+    "file": "assets/back.D82uztzV.png",
+    "src": "assets/avatars/g2/back.png"
+  },
+  "assets/avatars/g2/stand.png": {
+    "file": "assets/stand.4Bn-KO0r.png",
+    "src": "assets/avatars/g2/stand.png"
+  },
+  "assets/avatars/g2/walk_r.png": {
+    "file": "assets/walk_r.PvP5Q5Rf.png",
+    "src": "assets/avatars/g2/walk_r.png"
+  },
+  "assets/avatars/g3/back_l.png": {
+    "file": "assets/back_l.BEziPX6m.png",
+    "src": "assets/avatars/g3/back_l.png"
+  },
+  "assets/avatars/g3/stand.png": {
+    "file": "assets/stand.CEHUb5jU.png",
+    "src": "assets/avatars/g3/stand.png"
+  },
+  "assets/avatars/g3/walk_r.png": {
+    "file": "assets/walk_r.BRkU7KHI.png",
+    "src": "assets/avatars/g3/walk_r.png"
+  },
+  "assets/avatars/g4/stand.png": {
+    "file": "assets/stand.BGSW9LwN.png",
+    "src": "assets/avatars/g4/stand.png"
+  },
+  "assets/avatars/g4/walk_back_left.png": {
+    "file": "assets/walk_back_left.Cam_cJqO.png",
+    "src": "assets/avatars/g4/walk_back_left.png"
+  },
+  "assets/avatars/g4/walk_r.png": {
+    "file": "assets/walk_r.Dpo2IuSS.png",
+    "src": "assets/avatars/g4/walk_r.png"
+  },
+  "assets/avatars/g5/stand.png": {
+    "file": "assets/stand.BedyMF0J.png",
+    "src": "assets/avatars/g5/stand.png"
+  },
+  "assets/avatars/g5/walkb.png": {
+    "file": "assets/walkb.DdUmeEXj.png",
+    "src": "assets/avatars/g5/walkb.png"
+  },
+  "assets/avatars/g5/walkr.png": {
+    "file": "assets/walkr.B2-fMa7v.png",
+    "src": "assets/avatars/g5/walkr.png"
+  },
+  "assets/avatars/gs1/back.png": {
+    "file": "assets/back.BI5R23tw.png",
+    "src": "assets/avatars/gs1/back.png"
+  },
+  "assets/avatars/gs1/front.png": {
+    "file": "assets/front.CzBfIqwn.png",
+    "src": "assets/avatars/gs1/front.png"
+  },
+  "assets/avatars/gs1/stand.png": {
+    "file": "assets/stand.DlVeUfOW.png",
+    "src": "assets/avatars/gs1/stand.png"
+  },
+  "assets/avatars/lolita/idle.png": {
+    "file": "assets/idle.CIo5EhiE.png",
+    "src": "assets/avatars/lolita/idle.png"
+  },
+  "assets/avatars/lolita/walk.png": {
+    "file": "assets/walk.Dhi4HzmJ.png",
+    "src": "assets/avatars/lolita/walk.png"
+  },
+  "assets/avatars/lolita/walk_back.png": {
+    "file": "assets/walk_back.BrsMj-MF.png",
+    "src": "assets/avatars/lolita/walk_back.png"
+  },
+  "assets/avatars/m1/stand.png": {
+    "file": "assets/stand.9KQ4Cco6.png",
+    "src": "assets/avatars/m1/stand.png"
+  },
+  "assets/avatars/m1/walk_back_l.png": {
+    "file": "assets/walk_back_l.Bpr0la4a.png",
+    "src": "assets/avatars/m1/walk_back_l.png"
+  },
+  "assets/avatars/m1/walk_r.png": {
+    "file": "assets/walk_r.Dpe6wVkY.png",
+    "src": "assets/avatars/m1/walk_r.png"
+  },
+  "assets/avatars/m2/back.png": {
+    "file": "assets/back.fyfG1K88.png",
+    "src": "assets/avatars/m2/back.png"
+  },
+  "assets/avatars/m2/stand.png": {
+    "file": "assets/stand.AMtDBni0.png",
+    "src": "assets/avatars/m2/stand.png"
+  },
+  "assets/avatars/m2/walk.png": {
+    "file": "assets/walk.CKcMt2ft.png",
+    "src": "assets/avatars/m2/walk.png"
+  },
+  "assets/avatars/m3/back.png": {
+    "file": "assets/back.CMIw_kSH.png",
+    "src": "assets/avatars/m3/back.png"
+  },
+  "assets/avatars/m3/stand.png": {
+    "file": "assets/stand.D4ucYtss.png",
+    "src": "assets/avatars/m3/stand.png"
+  },
+  "assets/avatars/m3/walk.png": {
+    "file": "assets/walk.av-lCcF4.png",
+    "src": "assets/avatars/m3/walk.png"
+  },
+  "assets/avatars/m4/back.png": {
+    "file": "assets/back.Ci9WT0Dj.png",
+    "src": "assets/avatars/m4/back.png"
+  },
+  "assets/avatars/m4/stand.png": {
+    "file": "assets/stand.B8cWyxT5.png",
+    "src": "assets/avatars/m4/stand.png"
+  },
+  "assets/avatars/m4/walk.png": {
+    "file": "assets/walk.Cbr-kizb.png",
+    "src": "assets/avatars/m4/walk.png"
+  },
+  "assets/avatars/macho/idleprav.png": {
+    "file": "assets/idleprav.CNYaNWjb.png",
+    "src": "assets/avatars/macho/idleprav.png"
+  },
+  "assets/avatars/macho/walkingbackprav.png": {
+    "file": "assets/walkingbackprav.ZDepLsNO.png",
+    "src": "assets/avatars/macho/walkingbackprav.png"
+  },
+  "assets/avatars/macho/walkprav.png": {
+    "file": "assets/walkprav.nSJxFc_x.png",
+    "src": "assets/avatars/macho/walkprav.png"
+  },
+  "assets/avatars/man1/stand.png": {
+    "file": "assets/stand.DUre_eeS.png",
+    "src": "assets/avatars/man1/stand.png"
+  },
+  "assets/avatars/man1/walk-back.png": {
+    "file": "assets/walk-back.DUlKXgQC.png",
+    "src": "assets/avatars/man1/walk-back.png"
+  },
+  "assets/avatars/man1/walk-front.png": {
+    "file": "assets/walk-front.BwNm2fSP.png",
+    "src": "assets/avatars/man1/walk-front.png"
+  },
+  "assets/avatars/ninja/back.png": {
+    "file": "assets/back.DgdA1QiO.png",
+    "src": "assets/avatars/ninja/back.png"
+  },
+  "assets/avatars/ninja/stand_.png": {
+    "file": "assets/stand_.CXZnphc5.png",
+    "src": "assets/avatars/ninja/stand_.png"
+  },
+  "assets/avatars/ninja/walk.png": {
+    "file": "assets/walk.vH5NAZHl.png",
+    "src": "assets/avatars/ninja/walk.png"
+  },
+  "assets/avatars/nyash/idleprav.png": {
+    "file": "assets/idleprav.BjXlQcMA.png",
+    "src": "assets/avatars/nyash/idleprav.png"
+  },
+  "assets/avatars/nyash/walkbackprav.png": {
+    "file": "assets/walkbackprav.Du_2omTu.png",
+    "src": "assets/avatars/nyash/walkbackprav.png"
+  },
+  "assets/avatars/nyash/walkingprav.png": {
+    "file": "assets/walkingprav.Cfo0GBLB.png",
+    "src": "assets/avatars/nyash/walkingprav.png"
+  },
+  "assets/avatars/snowwhite/dance.png": {
+    "file": "assets/dance.ClTcZfnc.png",
+    "src": "assets/avatars/snowwhite/dance.png"
+  },
+  "assets/avatars/snowwhite/walk.png": {
+    "file": "assets/walk.DSsiA_WX.png",
+    "src": "assets/avatars/snowwhite/walk.png"
+  },
+  "assets/avatars/snowwhite/walk_back.png": {
+    "file": "assets/walk_back.DBJ_ZeFy.png",
+    "src": "assets/avatars/snowwhite/walk_back.png"
+  },
+  "assets/avatars/strannik/idleprav.png": {
+    "file": "assets/idleprav.BOPRPUs9.png",
+    "src": "assets/avatars/strannik/idleprav.png"
+  },
+  "assets/avatars/strannik/walkingbackprav.png": {
+    "file": "assets/walkingbackprav.BUrG3cF2.png",
+    "src": "assets/avatars/strannik/walkingbackprav.png"
+  },
+  "assets/avatars/strannik/walkingprav.png": {
+    "file": "assets/walkingprav.D8i-feC9.png",
+    "src": "assets/avatars/strannik/walkingprav.png"
+  },
+  "assets/avatars/woman1/stand.png": {
+    "file": "assets/stand.hQvLFjYY.png",
+    "src": "assets/avatars/woman1/stand.png"
+  },
+  "assets/avatars/woman1/walk-back.png": {
+    "file": "assets/walk-back.Dia2qtqT.png",
+    "src": "assets/avatars/woman1/walk-back.png"
+  },
+  "assets/avatars/woman1/walk-front.png": {
+    "file": "assets/walk-front.BwoTgLjM.png",
+    "src": "assets/avatars/woman1/walk-front.png"
+  },
+  "assets/avatars/woman2/stand-v2.png": {
+    "file": "assets/stand-v2.BuKrYi2I.png",
+    "src": "assets/avatars/woman2/stand-v2.png"
+  },
+  "assets/avatars/woman2/walk-back-v2.png": {
+    "file": "assets/walk-back-v2.BM1UPIJo.png",
+    "src": "assets/avatars/woman2/walk-back-v2.png"
+  },
+  "assets/avatars/woman2/walk-front-v2.png": {
+    "file": "assets/walk-front-v2.CsoG5Qpv.png",
+    "src": "assets/avatars/woman2/walk-front-v2.png"
+  },
+  "assets/avatars/woman3/stand.png": {
+    "file": "assets/stand.DxELLEcz.png",
+    "src": "assets/avatars/woman3/stand.png"
+  },
+  "assets/avatars/woman3/walk-back.png": {
+    "file": "assets/walk-back.Btj7g3eH.png",
+    "src": "assets/avatars/woman3/walk-back.png"
+  },
+  "assets/avatars/woman3/walk.png": {
+    "file": "assets/walk.yvKBusPW.png",
+    "src": "assets/avatars/woman3/walk.png"
+  },
+  "assets/avatars/woman4/stand.png": {
+    "file": "assets/stand.xWzDmm6J.png",
+    "src": "assets/avatars/woman4/stand.png"
+  },
+  "assets/avatars/woman4/walk-back.png": {
+    "file": "assets/walk-back.DgjhMYvG.png",
+    "src": "assets/avatars/woman4/walk-back.png"
+  },
+  "assets/avatars/woman4/walk.png": {
+    "file": "assets/walk.DkLMxwth.png",
+    "src": "assets/avatars/woman4/walk.png"
+  },
+  "assets/chat-cloude.png": {
+    "file": "assets/chat-cloude.BKVMOMAA.png",
+    "src": "assets/chat-cloude.png"
+  },
+  "assets/chat-cloude2.png": {
+    "file": "assets/chat-cloude2.CfmtvHyo.png",
+    "src": "assets/chat-cloude2.png"
+  },
+  "assets/chat-cloude3.png": {
+    "file": "assets/chat-cloude3.QiPtKqjd.png",
+    "src": "assets/chat-cloude3.png"
+  },
+  "assets/dummy.png": {
+    "file": "assets/dummy.Dwv5DYie.png",
+    "src": "assets/dummy.png"
+  },
+  "assets/flash.png": {
+    "file": "assets/flash.CUBaIcAp.png",
+    "src": "assets/flash.png"
+  },
+  "assets/font/PressStart2P-Regular.ttf": {
+    "file": "assets/PressStart2P-Regular.DogiNJoF.ttf",
+    "src": "assets/font/PressStart2P-Regular.ttf"
+  },
+  "assets/maps/tile_f1.png": {
+    "file": "assets/tile_f1.K-JDO2kf.png",
+    "src": "assets/maps/tile_f1.png"
+  },
+  "assets/maps/tile_furniture.png": {
+    "file": "assets/tile_furniture.D0e3UMGN.png",
+    "src": "assets/maps/tile_furniture.png"
+  },
+  "assets/maps/tile_m2.png": {
+    "file": "assets/tile_m2.BUZLx68u.png",
+    "src": "assets/maps/tile_m2.png"
+  },
+  "assets/maps/tile_v3.png": {
+    "file": "assets/tile_v3.CcwF7igU.png",
+    "src": "assets/maps/tile_v3.png"
+  },
+  "assets/maps/tile_wall.png": {
+    "file": "assets/tile_wall.wBSQk-EB.png",
+    "src": "assets/maps/tile_wall.png"
+  },
+  "assets/maps/tileset-v0.2.png": {
+    "file": "assets/tileset-v0.2.DolfQWYb.png",
+    "src": "assets/maps/tileset-v0.2.png"
+  },
+  "assets/maps/tileset_env-v2.1.png": {
+    "file": "assets/tileset_env-v2.1.CDpQe2nH.png",
+    "src": "assets/maps/tileset_env-v2.1.png"
+  },
+  "assets/sound/call.mp3": {
+    "file": "assets/call.CkyWX7Vz.mp3",
+    "src": "assets/sound/call.mp3"
+  },
+  "assets/sound/connecting.mp3": {
+    "file": "assets/connecting.De23-FH1.mp3",
+    "src": "assets/sound/connecting.mp3"
+  },
+  "assets/sound/exit.mp3": {
+    "file": "assets/exit.Dkrpyyzs.mp3",
+    "src": "assets/sound/exit.mp3"
+  },
+  "assets/sound/income.mp3": {
+    "file": "assets/income.-98Czx7N.mp3",
+    "src": "assets/sound/income.mp3"
+  },
+  "index.html": {
+    "file": "assets/index.BWM9YCgD.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "imports": [
+      "_phaser.D2i8FZdm.js"
+    ],
+    "css": [
+      "assets/index.CNczoHjO.css"
+    ],
+    "assets": [
+      "assets/dummy.Dwv5DYie.png",
+      "assets/tileset-v0.2.DolfQWYb.png",
+      "assets/tileset_env-v2.1.CDpQe2nH.png",
+      "assets/tile_m2.BUZLx68u.png",
+      "assets/tile_v3.CcwF7igU.png",
+      "assets/tile_wall.wBSQk-EB.png",
+      "assets/tile_furniture.D0e3UMGN.png",
+      "assets/tile_f1.K-JDO2kf.png",
+      "assets/chat-cloude.BKVMOMAA.png",
+      "assets/chat-cloude2.CfmtvHyo.png",
+      "assets/chat-cloude3.QiPtKqjd.png",
+      "assets/flash.CUBaIcAp.png",
+      "assets/stand.DUre_eeS.png",
+      "assets/walk-front.BwNm2fSP.png",
+      "assets/walk-back.DUlKXgQC.png",
+      "assets/stand.hQvLFjYY.png",
+      "assets/walk-front.BwoTgLjM.png",
+      "assets/walk-back.Dia2qtqT.png",
+      "assets/stand-v2.BuKrYi2I.png",
+      "assets/walk-front-v2.CsoG5Qpv.png",
+      "assets/walk-back-v2.BM1UPIJo.png",
+      "assets/stand.DxELLEcz.png",
+      "assets/walk.yvKBusPW.png",
+      "assets/walk-back.Btj7g3eH.png",
+      "assets/stand.xWzDmm6J.png",
+      "assets/walk.DkLMxwth.png",
+      "assets/walk-back.DgjhMYvG.png",
+      "assets/st.Y819hW_w.png",
+      "assets/frontr.CXV0wocM.png",
+      "assets/back.S3LJLEDB.png",
+      "assets/stand.4Bn-KO0r.png",
+      "assets/walk_r.PvP5Q5Rf.png",
+      "assets/back.D82uztzV.png",
+      "assets/stand.CEHUb5jU.png",
+      "assets/walk_r.BRkU7KHI.png",
+      "assets/back_l.BEziPX6m.png",
+      "assets/stand.BGSW9LwN.png",
+      "assets/walk_r.Dpo2IuSS.png",
+      "assets/walk_back_left.Cam_cJqO.png",
+      "assets/stand.BedyMF0J.png",
+      "assets/walkr.B2-fMa7v.png",
+      "assets/walkb.DdUmeEXj.png",
+      "assets/stand.9KQ4Cco6.png",
+      "assets/walk_r.Dpe6wVkY.png",
+      "assets/walk_back_l.Bpr0la4a.png",
+      "assets/stand.AMtDBni0.png",
+      "assets/walk.CKcMt2ft.png",
+      "assets/back.fyfG1K88.png",
+      "assets/stand.D4ucYtss.png",
+      "assets/walk.av-lCcF4.png",
+      "assets/back.CMIw_kSH.png",
+      "assets/stand.B8cWyxT5.png",
+      "assets/walk.Cbr-kizb.png",
+      "assets/back.Ci9WT0Dj.png",
+      "assets/stand_.CXZnphc5.png",
+      "assets/walk.vH5NAZHl.png",
+      "assets/back.DgdA1QiO.png",
+      "assets/stand.DlVeUfOW.png",
+      "assets/front.CzBfIqwn.png",
+      "assets/back.BI5R23tw.png",
+      "assets/stand.Fq697mzK.png",
+      "assets/walking.BS28NYho.png",
+      "assets/walking_back.CaK99MYL.png",
+      "assets/idleprav.CNYaNWjb.png",
+      "assets/walkprav.nSJxFc_x.png",
+      "assets/walkingbackprav.ZDepLsNO.png",
+      "assets/stand.CGNpgV4D.png",
+      "assets/walk.DD51SGNm.png",
+      "assets/walk_back.BQd3OdWA.png",
+      "assets/dance.ClTcZfnc.png",
+      "assets/walk.DSsiA_WX.png",
+      "assets/walk_back.DBJ_ZeFy.png",
+      "assets/idleprav.BOPRPUs9.png",
+      "assets/walkingprav.D8i-feC9.png",
+      "assets/walkingbackprav.BUrG3cF2.png",
+      "assets/idleprav.BjXlQcMA.png",
+      "assets/walkingprav.Cfo0GBLB.png",
+      "assets/walkbackprav.Du_2omTu.png",
+      "assets/idle.CIo5EhiE.png",
+      "assets/walk.Dhi4HzmJ.png",
+      "assets/walk_back.BrsMj-MF.png",
+      "assets/kamin.DAF-R2Nb.png",
+      "assets/cloud_small.Cq6vOxmc.png",
+      "assets/cloud_2.Bt53iBoG.png",
+      "assets/bar-table.CgTdIqsV.png",
+      "assets/candleslight.BvjavqCO.png",
+      "assets/dancepoll1.CJ3WEn1Y.png",
+      "assets/dancepoll2.Dxgmwo3q.png",
+      "assets/dancepoll_anim1.CeV-UvkP.png",
+      "assets/dancepoll_anim2.U5DChZ-E.png",
+      "assets/storlight.D0SJiJCG.png",
+      "assets/lamplight.DamyJGT1.png",
+      "assets/table_anim.C652Lccm.png",
+      "assets/light_arka.tZj0iYBA.png",
+      "assets/anim_portal.CleoK8Bm.png",
+      "assets/Sit.BrzfbkVd.png",
+      "assets/PressStart2P-Regular.DogiNJoF.ttf",
+      "assets/fxp2.CsIlLgAX.png",
+      "assets/no_video.6iHHRHK2.png",
+      "assets/no_audio.Cdp7HT-n.png",
+      "assets/hands_off.D4FV9ekl.png",
+      "assets/other.s0YWe4v4.png",
+      "assets/call.CkyWX7Vz.mp3",
+      "assets/connecting.De23-FH1.mp3",
+      "assets/exit.Dkrpyyzs.mp3",
+      "assets/income.-98Czx7N.mp3",
+      "assets/materialdesignicons-webfont.CSr8KVlo.eot",
+      "assets/materialdesignicons-webfont.Dp5v-WZN.woff2",
+      "assets/materialdesignicons-webfont.PXm3-2wK.woff",
+      "assets/materialdesignicons-webfont.B7mPwVP_.ttf"
+    ]
+  },
+  "node_modules/@mdi/font/fonts/materialdesignicons-webfont.eot": {
+    "file": "assets/materialdesignicons-webfont.CSr8KVlo.eot",
+    "src": "node_modules/@mdi/font/fonts/materialdesignicons-webfont.eot"
+  },
+  "node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf": {
+    "file": "assets/materialdesignicons-webfont.B7mPwVP_.ttf",
+    "src": "node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf"
+  },
+  "node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff": {
+    "file": "assets/materialdesignicons-webfont.PXm3-2wK.woff",
+    "src": "node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff"
+  },
+  "node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff2": {
+    "file": "assets/materialdesignicons-webfont.Dp5v-WZN.woff2",
+    "src": "node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff2"
+  },
+  "public/media/hands_off.png": {
+    "file": "assets/hands_off.D4FV9ekl.png",
+    "src": "public/media/hands_off.png"
+  },
+  "public/media/no_audio.png": {
+    "file": "assets/no_audio.Cdp7HT-n.png",
+    "src": "public/media/no_audio.png"
+  },
+  "public/media/no_video.png": {
+    "file": "assets/no_video.6iHHRHK2.png",
+    "src": "public/media/no_video.png"
+  },
+  "public/media/other.png": {
+    "file": "assets/other.s0YWe4v4.png",
+    "src": "public/media/other.png"
+  }
+}
