@@ -1,8 +1,0 @@
-[Unit]
-Description=Http server
-[Service]
-Type=simple
-User=vasya
-ExecStart=/usr/bin/python3.9 /root/python_projects/test_mysql/http_server.py
-[Install]
-WantedBy=multi-user.target
